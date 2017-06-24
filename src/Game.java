@@ -17,9 +17,9 @@ public class Game extends Canvas implements Runnable {
 				 start();
 	
 				 handler = new Handler();
-				 handler.addObjectObject(new Box(100,100));
-				 handler.addObjectObject(new Box(200,100));
-
+				 this.addKeyListener(new KeyInput(handler));
+				 handler.addObjectObject(new Wizard(100, 100, ID.Player, handler));
+				 this.addKeyListener(new KeyInput(handler));
 			}
 			
 			public void start(){
